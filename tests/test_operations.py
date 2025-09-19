@@ -1,7 +1,7 @@
-from src.operations import addition, divide, subtract, multiply
+from src.operations import add, divide, subtract, multiply
 
-def test_addition():
-    assert addition(2, 3) == 5
+def test_add():
+    assert add(2, 3) == 5
 
 def test_subtract():
     assert subtract(5, 3) == 2
