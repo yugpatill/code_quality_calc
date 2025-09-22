@@ -4,7 +4,7 @@
 
 This repo is a tiny calculator used to teach professional Python practices: clean structure, tests with coverage, linting/formatting, typing, security checks, CI, and VS Code workflows.
 
-Looking for the full student guide? Read the textbook in `docs/`:
+Looking for the full student guide? Read the textbook in [docs](docs/index.md):
 
 - Start here: docs/index.md
 - Or jump to: Setup (docs/02-setup.md), Testing (docs/05-testing.md), VS Code (docs/09-vscode.md), CI (docs/08-ci.md)
