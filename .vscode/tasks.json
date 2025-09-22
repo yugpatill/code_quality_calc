@@ -1,0 +1,92 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "venv: create",
+			"type": "shell",
+			"command": "python3 -m venv .venv"
+		},
+		{
+			"label": "venv: pip upgrade",
+			"type": "shell",
+			"command": ". .venv/bin/activate && pip install --upgrade pip"
+		},
+		{
+			"label": "install: dev tools",
+			"type": "shell",
+			"command": ". .venv/bin/activate && pip install -r requirements-dev.txt"
+		},
+		{
+			"label": "fmt",
+			"type": "shell",
+			"command": ". .venv/bin/activate && black . && isort ."
+		},
+		{
+			"label": "lint",
+			"type": "shell",
+			"command": ". .venv/bin/activate && flake8 $(git ls-files '*.py' | tr '\n' ' ') && pylint -j 0 $(git ls-files '*.py' | tr '\n' ' ')"
+		},
+		{
+			"label": "test",
+			"type": "shell",
+			"command": ". .venv/bin/activate && pytest -q"
+		},
+		{
+			"label": "coverage",
+			"type": "shell",
+			"command": ". .venv/bin/activate && pytest --cov=src --cov-report=xml --cov-report=term",
+			"problemMatcher": []
+		},
+		{
+			"label": "typecheck",
+			"type": "shell",
+			"command": ". .venv/bin/activate && mypy src",
+			"problemMatcher": []
+		},
+		{
+			"label": "coverage: gutters refresh",
+			"type": "shell",
+			"command": "echo 'Reload coverage.xml in Coverage Gutters'",
+			"problemMatcher": []
+		},
+		{
+			"label": "security",
+			"type": "shell",
+			"command": ". .venv/bin/activate && make security",
+			"problemMatcher": []
+		},
+		{
+			"label": "pre-commit: all-files",
+			"type": "shell",
+			"command": ". .venv/bin/activate && pre-commit run --all-files",
+			"problemMatcher": []
+		},
+		{
+			"label": "quality: all",
+			"dependsOn": [
+				"fmt",
+				"lint",
+				"typecheck",
+				"coverage",
+				"security"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "lint (ad-hoc)",
+			"type": "shell",
+			"command": ". .venv/bin/activate && flake8 $(git ls-files '*.py' | tr '\\n' ' ') && pylint -j 0 $(git ls-files '*.py' | tr '\\n' ' ')",
+			"problemMatcher": [
+				"$eslint-stylish"
+			]
+		},
+		{
+			"label": "typecheck (ad-hoc)",
+			"type": "shell",
+			"command": ". .venv/bin/activate && mypy src",
+			"problemMatcher": [
+				"$tsc"
+			]
+		}
+	]
+}
