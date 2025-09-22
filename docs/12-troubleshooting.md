@@ -11,3 +11,12 @@ If stuck, run the “quality: all” task and read the first failing step’s ou
 ---
 
 Next: [Appendix: Configuration files explained](./appendix-configs.md)
+
+## Try it
+
+- Intentionally cause a `ModuleNotFoundError` by running from the wrong directory; fix it by switching to repo root and activating the venv.
+- Trigger a coverage failure by skipping a branch; write a test to cover it and re-run.
+
+## Check yourself
+
+- Can you locate the exact step that failed using the CI logs?

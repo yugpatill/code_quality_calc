@@ -1,3 +1,5 @@
+![CI](https://github.com/kaw393939/code_quality_calc/actions/workflows/quality.yml/badge.svg?branch=main)
+
 # Basic Calculator — Professional Python Project Template
 
 This repo is a tiny calculator used to teach professional Python practices: clean structure, tests with coverage, linting/formatting, typing, security checks, CI, and VS Code workflows.

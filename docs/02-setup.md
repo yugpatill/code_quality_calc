@@ -2,6 +2,12 @@
 
 This project uses a local virtual environment `.venv` and pinned developer tools.
 
+## Learning goals
+
+- Create and activate a virtual environment
+- Install developer tooling consistently
+- Verify tests, linters, and type checks locally
+
 ## Create and activate the environment
 
 ```zsh
@@ -35,6 +41,15 @@ This installs Black, isort, Flake8, Pylint, pytest (+cov, +pylint plugin), mypy,
   ```
 
 If these pass, you’re ready.
+
+## Try it (VS Code one-click)
+
+- Run the task: Command Palette → “Run Task” → “setup: dev”. Then run “quality: all”.
+
+## Check yourself
+
+- Where is the interpreter selected in VS Code?
+- Which command writes `coverage.xml` for Coverage Gutters?
 
 ---
 
