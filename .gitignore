@@ -140,3 +140,5 @@ cython_debug/
 # macOS
 .DS_Store
 student_python_dev_guide
+COURSE_OUTLINE_VISION.md
+ENHANCED_COURSE_VISION.md
