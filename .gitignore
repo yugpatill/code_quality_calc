@@ -129,12 +129,13 @@ cython_debug/
 # PyCharm / IntelliJ
 .idea/
 
-# VS Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+# VS Code (we include .vscode/ configs in this educational project)
+# Uncomment the lines below if you want to ignore VS Code configs:
+# .vscode/*
+# !.vscode/settings.json
+# !.vscode/tasks.json
+# !.vscode/launch.json
+# !.vscode/extensions.json
 
 # macOS
 .DS_Store
