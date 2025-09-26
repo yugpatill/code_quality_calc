@@ -73,7 +73,7 @@
         "fmt",
         "lint",
         "typecheck",
-        "coverage",
+        "test",
         "security"
       ],
       "problemMatcher": []
@@ -83,7 +83,7 @@
       "type": "shell",
       "command": ". .venv/bin/activate && flake8 $(git ls-files '*.py' | tr '\\n' ' ') && pylint -j 0 $(git ls-files '*.py' | tr '\\n' ' ')",
       "problemMatcher": [
-        "$eslint-stylish"
+        "$python"
       ]
     },
     {
@@ -91,7 +91,7 @@
       "type": "shell",
       "command": ". .venv/bin/activate && mypy src",
       "problemMatcher": [
-        "$tsc"
+        "$python"
       ]
     },
     {
@@ -99,7 +99,7 @@
       "type": "shell",
       "command": ". .venv/bin/activate && flake8 $(git ls-files '*.py' | tr '\\n' ' ') && pylint -j 0 $(git ls-files '*.py' | tr '\\n' ' ') && mypy src",
       "problemMatcher": [
-        "$eslint-stylish"
+        "$python"
       ]
     }
   ]

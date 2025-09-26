@@ -1,6 +1,8 @@
 {
+  // Python environment
   "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
   "python.terminal.activateEnvironment": true,
+
   // Testing
   "python.testing.pytestEnabled": true,
   "python.testing.unittestEnabled": false,
@@ -9,23 +11,32 @@
     "-q",
     "tests"
   ],
-  // Formatting & imports
+
+  // Formatting & imports (modern approach)
   "editor.formatOnSave": true,
-  // Use Python extension as formatter and point it to Black
-  "python.formatting.provider": "black",
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
   },
-  // Organize imports on explicit save
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "explicit"
-  },
+
+  // Linting
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.mypyEnabled": true,
+
+  // Type checking
+  "python.analysis.typeCheckingMode": "basic",
+
   // Coverage Gutters
   "coverage-gutters.coverageFileNames": [
     "coverage.xml"
   ],
   "coverage-gutters.showLineCoverage": true,
   "coverage-gutters.highlight": true,
+
   // File hygiene
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true
