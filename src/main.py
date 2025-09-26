@@ -28,7 +28,7 @@ def build_parser() -> argparse.ArgumentParser:
         return p
 
     op_parser("add")
-    op_parser("subtract ")
+    op_parser("subtract")
     op_parser("multiply")
     op_parser("divide")
 
