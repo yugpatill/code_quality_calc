@@ -24,3 +24,13 @@ repos:
         additional_dependencies:
           - flake8-bugbear>=24.2
           - flake8-comprehensions>=3.14
+
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest
+        entry: pytest
+        language: system
+        pass_filenames: false
+        always_run: true
+        args: ["--override-ini=addopts=", "--cov=src", "-q", "tests/"]
