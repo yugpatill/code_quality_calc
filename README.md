@@ -1,6 +1,6 @@
 ![CI](https://github.com/kaw393939/code_quality_calc/actions/workflows/quality.yml/badge.svg?branch=main)
 
-# 🧮 Professional Python Calculator — Learn Industry-Grade Development
+# 🧮 Professional Python Calculator — Learn Industry-Grade Development .
 
 > **Transform a simple calculator into production-ready software** while mastering professional Python development practices used by top tech companies.
 
